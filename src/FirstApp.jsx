@@ -1,6 +1,5 @@
-import React from 'react'
-import './style.css';
-import PropTypes, { number, string } from 'prop-types'
+/* import './style.css'; */
+import PropTypes from 'prop-types'
 /* 
 para no utilizar una etiqueta padre en el componente 
 podemos utilizar Fragment de react, una forma mas rapida
@@ -22,8 +21,8 @@ export const FirstApp = ({title}) => {
 export const FirstApp = ({ title, numero }) => {
   return (
     <>
-    <h1> { title +' '+ numero } </h1>
-    <p>Tardio Jaime</p>
+    <h1> { title } </h1>
+    <p>Tardio Jaime { numero }</p>
     </>
   )
 }
@@ -32,7 +31,8 @@ FirstApp.propTypes = {
   numero: PropTypes.number
 }
 FirstApp.defaultProps = {
-  title: 'no hay titulo'
+  title: 'no hay titulo',
+  numero: 25
 }
 /* 
 PropTypes, defenir los props
