@@ -1,4 +1,5 @@
 import React from 'react'
+import './style.css';
 /* 
 para no utilizar una etiqueta padre en el componente 
 podemos utilizar Fragment de react, una forma mas rapida
