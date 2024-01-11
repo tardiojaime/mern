@@ -1,13 +1,14 @@
-import { useState } from 'react'
+
 import './App.css'
 import { FirstApp } from './FirstApp'
+import { CounterApp } from './CounterApp'
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
       <h1>Vite + React</h1>
-    <FirstApp/>
+    <FirstApp title="Hola soy daniel" numero = {15}/>
+    <CounterApp/>
     </>
   )
 }

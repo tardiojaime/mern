@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.css';
+import PropTypes, { number, string } from 'prop-types'
 /* 
 para no utilizar una etiqueta padre en el componente 
 podemos utilizar Fragment de react, una forma mas rapida
@@ -12,16 +13,27 @@ que no necesitan ser procesados
 react no puede imprimir objetos
 012 a continuacion
 */
-const newMessage = {
-    message: 'First App',
-    title: 'Jaime Tardio'
-};
+/* 
+export const FirstApp = (props) => {
+desustructuracion de props  
+export const FirstApp = ({title}) => {
+*/
 
-export const FirstApp = () => {
+export const FirstApp = ({ title, numero }) => {
   return (
     <>
-    <h1> { JSON.stringify(newMessage) } </h1>
+    <h1> { title +' '+ numero } </h1>
     <p>Tardio Jaime</p>
     </>
   )
 }
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  numero: PropTypes.number
+}
+FirstApp.defaultProps = {
+  title: 'no hay titulo'
+}
+/* 
+PropTypes, defenir los props
+ */
