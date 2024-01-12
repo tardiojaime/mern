@@ -1,15 +1,15 @@
 import { useState } from "react"
+import PropTypes from "prop-types"
+export const AddCategory = ({onNewCategory}) => {
+    const [inputValue, setInputValue] = useState('');
 
-export const AddCategory = ({setCategories}) => {
-    const [inputValue, setInputValue] = useState('One Punch');
     const onInputChange = (event) =>{
-        console.log(event.target.value)
         setInputValue(event.target.value)
     }
     const onSumbit = (event)=>{
         event.preventDefault();
         if(inputValue.trim().length <= 2) return;
-        setCategories((cat)=>[inputValue, ...cat]);
+        onNewCategory(inputValue.trim())
         setInputValue('');
     }
   return (
@@ -19,7 +19,6 @@ export const AddCategory = ({setCategories}) => {
     </form>
   )
 }
-
 AddCategory.propTypes = {
-  
+  onNewCategory: PropTypes.func.isRequired
 }
