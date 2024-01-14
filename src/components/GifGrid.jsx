@@ -1,7 +1,5 @@
 
 import PropTypes from 'prop-types'
-import { getGifs } from '../helpers/getGifs'
-import { useEffect, useState } from 'react'
 import { GifItem } from './GifItem';
 import { useFetchGifs } from '../hooks/useFetchGifs';
 

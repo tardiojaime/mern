@@ -13,7 +13,7 @@ export const AddCategory = ({onNewCategory}) => {
         setInputValue('');
     }
   return (
-    <form onSubmit={ (event) => onSumbit(event)}>
+    <form onSubmit={ (event) => onSumbit(event)} aria-label="form" >
     {/* <input onChange={(event)=>onInputChange(event)} type="text" placeholder='Buscar gifs' value={inputValue}/> */}
     <input onChange={onInputChange} type="text" placeholder='Buscar gifs' value={inputValue}/>
     </form>
