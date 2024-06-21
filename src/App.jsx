@@ -8,7 +8,9 @@ function App() {
 
   return (
     <>
-      <h1>Vite + React</h1>
+      <h1>Vite + React plus</h1>
+      <p>{count} </p>
+      <button onClick={()=>setCount((count)=>count+1)}>++</button>
     </>
   )
 }

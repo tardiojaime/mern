@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  react-app:
+    restart: always
+    image: node:18.20.3
+    # establecer directorio de trabajo dentro del contenedor
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    command: sh -c "npm install && npm run dev"
